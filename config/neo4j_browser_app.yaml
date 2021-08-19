@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neo4jbrowser
+spec:
+  selector:
+    matchLabels:
+      app: neo4jbrowser
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: neo4jbrowser
+    spec:
+      containers:
+      - name: neo4jbrowser
+        image: davidlrosenblum/neo4jbrowser:4.3.1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
