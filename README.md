@@ -1,4 +1,4 @@
-# neo4j-static-http-app
+# neo4j-static-browser-app
 Docker Image for a web server that serves Neo4j static browser content
 To use with Kubernetes
 Clone repo
